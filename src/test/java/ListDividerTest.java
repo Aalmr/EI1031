@@ -7,6 +7,8 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.Arrays;
 import java.util.Collection;
 
+import static org.junit.Assert.fail;
+
 @RunWith(Parameterized.class)
 public class ListDividerTest {
     private int[] elementos;
@@ -50,5 +52,6 @@ public class ListDividerTest {
 
     @Test
     void divideList() {
+        fail("No implementado");
     }
 }
