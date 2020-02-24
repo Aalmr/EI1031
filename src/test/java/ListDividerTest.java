@@ -1,5 +1,5 @@
 import org.junit.BeforeClass;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
@@ -11,13 +11,13 @@ import static org.junit.Assert.fail;
 
 @RunWith(Parameterized.class)
 public class ListDividerTest {
-    private int[] elementos;
-    private float fraccion;
-    private int[] list1;
-    private int[] list2;
+    private Object[]  elementos;
+    private Object[]  fraccion;
+    private Object[] list1;
+    private Object[]  list2;
     private static ListDivider listDivider;
 
-    public ListDividerTest(int[] elementos, float fraccion, int[] list1, int[] list2){
+    public ListDividerTest(Object[] elementos, Object[] fraccion, Object[] list1, Object[] list2){
         this.elementos = elementos;
         this.fraccion = fraccion;
         this.list1 = list1;
@@ -51,7 +51,7 @@ public class ListDividerTest {
     }
 
     @Test
-    void divideList() {
+    public void divideList() {
         fail("No implementado");
     }
 }
