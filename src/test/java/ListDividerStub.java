@@ -1,8 +1,8 @@
 public class ListDividerStub extends ListDivider{
-    private int[][] dummy;
+    public int[] dummy;
 
     @Override
-    public int[][] divideList(int[] elementos, float fraccion) {
+    public int[] obtener_subtotales_por_grupo(int[] elementos, int[] grupos) {
         return dummy;
     }
 }

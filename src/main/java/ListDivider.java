@@ -1,3 +1,6 @@
+import Exceptions.EmptyListException;
+import Exceptions.NullListException;
+import Exceptions.OutOfRangeFractionException;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
@@ -5,12 +8,22 @@ import java.util.HashSet;
 
 import static java.util.Collections.sort;
 
-public class ListDivider {
+public abstract class ListDivider {
     public ListDivider(){
 
     }
 
-    public int[][] divideList(int[] elementos, float fraccion){
+    public int[][] divideList(int[] elementos, float fraccion)
+            throws EmptyListException, NullListException, OutOfRangeFractionException {
+
+        if (elementos == null)
+            throw new NullListException("La lista es nula");
+        if (elementos.length == 0)
+            throw new EmptyListException("La lista debe contener elementos");
+        if (fraccion>1 || fraccion<0)
+            throw new OutOfRangeFractionException("La fraccion se sale de rango");
+
+
         ArrayList<Integer> grupList = new ArrayList<Integer>();
         for (int elem: elementos){
             if (!grupList.contains(elem)){
